@@ -1,0 +1,20 @@
+body {
+  overflow: hidden;
+}
+
+.unitClock {
+  display: block;
+  /* background: white; */
+}
+
+#clockPanel {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(18, auto);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* background-color: pink; */
+  gap: 2px;
+}

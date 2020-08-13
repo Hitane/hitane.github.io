@@ -85,7 +85,15 @@ class DigitStore {
         let dist_0;
         let dist_1;
         // If total cross-over distance < total straight-through distance then cross-over, else straight-through
-        if (dists[1] + dists[2] < dists[0] + dists[3]) {
+        if (dists[1] + dists[2] == dists[0] + dists[3]) {
+            if (Math.abs(dists[1] - dists[2]) < Math.abs(dists[0] - dists[3])) {
+                dist_0 = dists[1];
+                dist_1 = dists[2];
+            } else {
+                dist_0 = dists[0];
+                dist_1 = dists[3];
+            }
+        } else if (dists[1] + dists[2] < dists[0] + dists[3]) {
             dist_0 = dists[1];
             dist_1 = dists[2];
         } else {
